@@ -1,0 +1,15 @@
+.divTitel{
+  margin-top: 100px;
+  margin-bottom: 20px;
+  text-align:center;
+}
+
+.divInput{
+  padding: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.t{
+border-color: blueviolet;
+border-style: double;}

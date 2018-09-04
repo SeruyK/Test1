@@ -1,0 +1,15 @@
+<div class="blockCurrency">
+  <div class="input-group mb-1">
+
+    <input class="inputAmount" [(ngModel)]="amount" (change)="onChange()">
+    <select  class="custom-select" [(ngModel)]="currency" (change)="onChange()"  id="inputGroupSelect04" aria-label="Example select with button addon" >
+      <!--<option selected value="ddd">df</option>-->
+      <option *ngFor="let c of currencys" value="{{c}}">{{c}}</option>
+    </select>
+    <div> = </div>
+    <input class="inputAmount" [(ngModel)]="amount2" (change)="onChange2()">
+    <select class="custom-select" [(ngModel)]="currency2" (change)="onChange()"  id="inputGroupSelect05" aria-label="Example select with button addon">
+      <option *ngFor="let c of currencys" value="{{c}}">{{c}}</option>
+    </select>
+  </div>
+</div>

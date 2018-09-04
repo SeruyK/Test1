@@ -1,0 +1,20 @@
+.blockCurrency{
+  width: 500px;
+  margin: 20px;
+  padding: 5px;
+  border-style: solid;
+  border-color: darkblue;
+  right: 0;
+}
+.fild1{
+  width:80px;
+  border-style: solid;
+  border-color: darkgrey;
+}
+.inputAmount{
+  width:100px;
+  border-style: solid;
+  border-color: darkgrey;
+  padding: 5px;
+  text-align: right;
+}
