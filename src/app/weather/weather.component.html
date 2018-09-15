@@ -1,0 +1,36 @@
+<button id="LoadWeather">Load Weather</button>
+<button id="FindWeather">Find weather where the temperature is over  </button>
+<input type="text" size="4" [(ngModel)]="degrees">
+
+<div>
+  <mat-table style="border: solid blue" [dataSource]='dataSource'>
+    <ng-container matColumnDef="time">
+      <mat-header-cell *matHeaderCellDef> TIME </mat-header-cell>
+      <mat-cell *matCellDef= 'let weather'> {{weather.dt_txt}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="temp">
+      <mat-header-cell *matHeaderCellDef> TEMP</mat-header-cell>
+    <!--  <mat-cell *matCellDef= "let weather"> {{weather.main.temp}}</mat-cell> -->
+      <mat-cell *matCellDef= "let weather"> {{weather.temp}}</mat-cell>
+    </ng-container>
+    <ng-container  matColumnDef="wind">
+      <mat-header-cell *matHeaderCellDef> WIND</mat-header-cell>
+      <!--    <mat-cell  *matCellDef= "let weather"> {{weather.wind.speed}}</mat-cell> -->
+      <mat-cell  *matCellDef= "let weather"> {{weather.wind}}</mat-cell>
+    </ng-container>
+     <ng-container  matColumnDef="weather">
+       <mat-header-cell *matHeaderCellDef> WEATHER</mat-header-cell>
+       <!--    <mat-cell  *matCellDef= "let weather"> {{weather.weather[0].main}}</mat-cell> -->
+       <mat-cell  *matCellDef= "let weather"> {{weather.weather}}</mat-cell>
+     </ng-container>
+     <mat-header-row style="border: solid yellow" *matHeaderRowDef="displayedColumns"></mat-header-row>
+     <mat-row  *matRowDef="let row; columns: displayedColumns"></mat-row>
+   </mat-table>
+ </div>
+<button id="graph">Show temperature change graph </button>
+<div id="chart"></div>
+ <!--<div class="table-responsive-md">
+   <table class="table">
+     ...
+   </table>
+ </div>-->
